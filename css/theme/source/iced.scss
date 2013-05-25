@@ -43,3 +43,22 @@ $linkColor: #1F00FF;
 // Theme template ------------------------------
 @import "../template/theme";
 // ---------------------------------------------
+
+.reveal {
+	section img {
+		border-radius: 10px;
+	}
+	ul, ol {
+		margin-bottom: 1em;
+	}
+}
+
+.reveal .roll span {
+	color: #fff;
+	background: darken( $linkColor, 15% );
+}
+
+.reveal .slides section .fragment.highlight-red.visible {
+	color: #fff;
+	background: #ff0000;
+}
