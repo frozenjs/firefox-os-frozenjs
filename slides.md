@@ -139,3 +139,12 @@ Github Pages serve `.webapp` files with `Content-Type: application/x-web-app-man
 ![Submit Game](img/submit.png)
 
 [Submission Form](https://marketplace.firefox.com/developers/submit/)
+
+--
+
+# More Resources
+
+* [App Manifest](https://developer.mozilla.org/en-US/docs/Web/Apps/Manifest)
+* [Packaged Apps](https://developer.mozilla.org/en-US/docs/Web/Apps/Packaged_apps)
+* [Firefox Marketplace API](http://firefox-marketplace-api.readthedocs.org/en/latest/)
+* [Firefox OS Boilerplate](https://github.com/robnyman/Firefox-OS-Boilerplate-App)
