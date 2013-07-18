@@ -1,0 +1,19 @@
+{
+  "name": "firefox-landscape",
+  "version": "0.1.0",
+  "main": "main.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ],
+  "gitHead": "21738818c47dc985cc3a0b77ed871af5569d3e8d",
+  "readme": "firefox-landscape\n=================\n\nUse mozLockOrientation to lock a screen in landscape mode\n",
+  "readmeFilename": "README.md",
+  "_id": "firefox-landscape@0.1.0",
+  "description": "firefox-landscape =================",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/iceddev/firefox-landscape"
+  }
+}

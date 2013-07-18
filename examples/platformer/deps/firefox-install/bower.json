@@ -1,0 +1,19 @@
+{
+  "name": "firefox-install",
+  "version": "0.1.0",
+  "main": "main.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ],
+  "gitHead": "1892eacc1f2d4c9d9e7a4074931240ae938104e3",
+  "readme": "firefox-install\n===============\n\nInstall ribbon for Firefox apps in the style of Github ribbons\n",
+  "readmeFilename": "README.md",
+  "_id": "firefox-install@0.1.0",
+  "description": "firefox-install ===============",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/iceddev/firefox-install"
+  }
+}

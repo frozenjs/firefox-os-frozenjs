@@ -1,0 +1,22 @@
+{
+  "name": "firefox-landscape",
+  "version": "0.1.0",
+  "description": "Use mozLockOrientation to lock a screen in landscape mode",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/iceddev/firefox-landscape"
+  },
+  "keywords": [
+    "ffos",
+    "firefox",
+    "landscape"
+  ],
+  "author": "Blaine Bublitz",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "gitHead": "7f1b27331ee7f0ea152fdcd5b18dd646f9fdb90b"
+}
