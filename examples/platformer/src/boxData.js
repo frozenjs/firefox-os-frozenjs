@@ -3,9 +3,9 @@ define(
 {
   "entities": [
     {
-      "x": 524,
-      "y": 663.5,
-      "halfWidth": 523,
+      "x": 770,
+      "y": 662,
+      "halfWidth": 1000,
       "halfHeight": 102.5,
       "staticBody": true,
       "sensor": false,
@@ -70,8 +70,8 @@ define(
       "id": 3
     },
     {
-      "x": 1013,
-      "y": 314,
+      "x": 1358,
+      "y": 357,
       "halfWidth": 30,
       "halfHeight": 362.5,
       "staticBody": true,
@@ -82,18 +82,40 @@ define(
     {
       "x": 507,
       "y": -33,
-      "halfWidth": 504,
+      "halfWidth": 1004,
       "halfHeight": 34,
       "staticBody": true,
       "sensor": false,
       "type": "Rectangle",
       "id": 5
+    },
+    {
+      "points": [
+        {
+          "x": -43,
+          "y": -92.33333333333337
+        },
+        {
+          "x": 95,
+          "y": 44.66666666666663
+        },
+        {
+          "x": -52,
+          "y": 47.66666666666663
+        }
+      ],
+      "x": 1024,
+      "y": 515.3333333333334,
+      "staticBody": true,
+      "sensor": false,
+      "type": "Polygon",
+      "id": 6
     }
   ],
   "joints": [],
   "canvas": {
     "height": 770,
-    "width": 980
+    "width": 1330
   }
 }
 
