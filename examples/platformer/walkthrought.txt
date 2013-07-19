@@ -1,0 +1,85 @@
+1. USE IMAGE, CREATE GEOMETRY and "player" square
+
+2. RESIZE index.html 1330 770
+
+3. RUN
+
+4. DRAW BACKGROUND:   
+   'frozen/plugins/loadImage!images/background.png'
+   ctx.drawImage(background, 0, 0);
+
+5.  CREATE PLAYER:
+define([
+  'dcl',
+  'frozen/box2d/entities/Rectangle',
+  'frozen/plugins/loadImage!images/player.png'
+], function(dcl, Rectangle, playerImg){
+
+  'use strict';
+
+  return dcl(Rectangle, {
+    linearDamping : 0.5,
+    angularDamping : 1,
+    draw: function(ctx){
+      ctx.drawImage(playerImg, (this.x * this.scale) - 33, (this.y * this.scale) - 56);
+    }
+  });
+
+});
+
+5.1 RUN
+
+6. ADD CONTROLLER UI
+controlPt: {x: 128, y: 665}
+'frozen/plugins/loadImage!images/crosshairs.png'
+ctx.drawImage(crosshairs, this.controlPt.x - crosshairs.width/2, this.controlPt.y - crosshairs.height/2);
+
+7. HANDLE INPUT
+define([
+  'frozen/utils/distance',
+  'frozen/utils/degreesFromCenter'
+], function(distance, degreesFromCenter){
+
+  'use strict';
+
+  return function(im, millis){
+
+    var power = 0.1875;
+    if(im.mouseAction.isPressed()){
+      var dist = distance(im.mouseAction.position, this.controlPt);
+      if(dist < 160){
+        var angle = degreesFromCenter(this.controlPt, im.mouseAction.position);
+        if(angle > 45 && angle < 135){
+          //move right
+          this.box.applyImpulseDegrees('player', 90, power * millis);
+        }else if(angle > 215 && angle < 335){
+          //move left
+          this.box.applyImpulseDegrees('player', 270, power * millis);
+        }
+      }
+    }
+
+  };
+
+});
+
+
+8. USE ANIMATIONS
+'frozen/plugins/loadImage!images/walking.png'
+var walkingLeftImg = ResourceManager.prototype.flipImageX('walkingLeft', walkingImg);
+walkingAnim: Animation.prototype.createFromSheet(11, 75, walkingImg, 75, 96),
+walkingLeftAnim: Animation.prototype.createFromSheet(11, 75, walkingLeftImg, 75, 96),
+
+if(this.linearVelocity.x > 1){
+  this.walkingAnim.draw(ctx, (this.x * this.scale) - 22.5, (this.y * this.scale) - 56);
+}else if(this.linearVelocity.x < -1){
+  this.walkingLeftAnim.draw(ctx, (this.x * this.scale) - 22.5, (this.y * this.scale) - 56);
+}
+else{
+  ctx.drawImage(playerImg, (this.x * this.scale) - 33, (this.y * this.scale) - 56);
+}
+
+
+9. UPDATE ANIMATIONS
+this.entities.player.walkingAnim.update(millis);
+this.entities.player.walkingLeftAnim.update(millis);
